@@ -1,0 +1,183 @@
+:root {
+    --bg-color: #3A4A3F;
+    --text-primary: #EDE4C5;
+    --text-secondary: #A8B2A5;
+    --temperature-color: #D46A6A;
+    --humidity-color: #87A8A0;
+    --chart-bg: #546D73;
+    --accent-color: #B08D57;
+    --moisture-bg: #354C56;
+    --button-color: #A05A44;
+}
+
+/* Globales Styling */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 100%;
+    padding: 1rem;
+    color: var(--text-primary);
+}
+
+.nav-link {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--text-secondary);
+}
+
+/* Textfarben */
+h5, h6 {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.small, .time-stamp {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Balkenanzeige für Temperatur & Feuchtigkeit */
+.gauge-bar {
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--chart-bg);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.gauge-indicator-temp {
+    background-color: var(--temperature-color);
+    height: 100%;
+}
+
+.gauge-indicator-humidity {
+    background-color: var(--humidity-color);
+    height: 100%;
+}
+
+.gauge-value {
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Charts */
+#thermometerChart, #humidityChart {
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.chart-container {
+    background-color: var(--chart-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-text {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Tabellen */
+.table {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
+}
+
+.table th {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.table td {
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.button {
+    background-color: var(--button-color);
+    color: var(--text-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-color);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+#header {
+    background-color: var(--bg-color); /* Hintergrundfarbe */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo img {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+}
+
+.footer-logo img {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+}
+
+.header-logo-text, .footer-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+#thermometerChart, #humidityChart {
+    max-width: 150px;
+    max-height: 250px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Container für die Verlaufs-Charts */
+.chart-container {
+    width: 100%;
+    max-width: 500px;     /* Begrenzung für mobile Darstellung */
+    margin: 0 auto 20px;  /* Zentrieren und Abstand nach unten */
+    padding: 15px;
+    background-color: var(--chart-bg); /* Dezenter Hintergrund für Kontrast */
+    border-radius: 10px;
+}
+
+canvas {
+    max-width: 100%;
+    height: 250px;        /* Feste Höhe, um Übergröße zu vermeiden */
+}
